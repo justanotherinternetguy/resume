@@ -1,0 +1,308 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{makecell}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{\footnotesize #2} \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{\footnotesize #2} \\
+		\textit{\small #4} \\
+	\end{tabular*}\vspace{-15pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \textit{\footnotesize #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	
+	%-----------HEADING-----------
+	\begin{center}
+		\href{https://github.com/justanotherinternetguy}{\underline{github.com/justanotherinternetguy}}
+	\end{center}
+	
+	
+	%-----------EDUCATION-----------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSSubheading
+	{Cornell University}{Ithaca, NY}
+	{\textit{\small Computer Science \& Linguistics}}
+	{Expected Graduation 2030}
+	
+	\resumeSSubheading
+	{Millburn High School}{Millburn, NJ}
+	{\textit{\small Graduating Honors Class of 2026}}
+	{Sept. 2022 -- June 2026}
+
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------EXPERIENCE-----------
+	\section{Research}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{StutterZero \& StutterFormer: End-to-End Speech Correction for Stuttering}{Sept. 2024 -- Present}
+	{}{}
+	\resumeItemListStart
+	\resumeItem{Developed encoder-decoder and Transformer models using Pytorch to transcribe and correct stutters from speech signals}
+	\resumeItem{Introduced \& published the first end-to-end model for stutter correction, US Utility Patent \#19/288,365 under review}
+	\resumeItem{\href{https://ieeexplore.ieee.org/document/11288978}{\underline{https://ieeexplore.ieee.org/document/11288978}}}
+	\resumeItem{\href{https://github.com/justanotherinternetguy/StutterZero}{\underline{github.com/justanotherinternetguy/StutterZero}}}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{XSpeech: Multi-Branch Learning for Multi-Class Stuttering Classification}{Sept. 2023 -- April 2024}
+	{}{}
+	\resumeItemListStart
+	\resumeItem{Built CNN-LSTM multi-branch model using Tensorflow to classify and diagnose stuttered speech}
+	\resumeItem{\href{https://nhsjs.com/2025/xspeech-multi-branch-learning-for-multi-class-stuttering-classification-with-specaugment/}{\underline{Published}} in the National High School Journal of Science}
+	\resumeItem{\href{https://github.com/justanotherinternetguy/XSpeech}{\underline{github.com/justanotherinternetguy/XSpeech}}}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{\textbf{$\mu$}Lang -- Generating a Morphologically Average Conlang Lexicon}{June 2025}
+	{}{}
+	\resumeItemListStart
+	\resumeItem{Explored genetic, evolutionary, and neural algorithms to generate and simulate linguistic evolution}
+	\resumeItem{Published on \href{https://community.wolfram.com/groups/-/m/t/3501302}{\underline{Wolfram Community}}}
+	\resumeItem{Invited to speak at \href{https://www.wolfram.com/events/technology-conference/2025/}{\underline{Wolfram Technology Conference 2025}}}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Characterizing Percussive Damage in Fossil Wood}{Sept. 2023 -- June 2025}
+	{}{}
+	\resumeItemListStart
+	\resumeItem{Applied VGG16/19, ResNets \& Haralick texture features to identify and classify damage on fossil wood samples caused by primate tools}
+	\resumeItem{Linked results to archaeology, bridging primatology with computational analysis}
+	\resumeItem{Co-authored primatology/archaeology study under professor mentorship}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------PROJECTS-----------
+	\section{Awards \& Honors}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{1st Place Grand Award -- International Science and Engineering Fair} $|$ \emph{Computational Biology}}{May 2025}
+	
+	\resumeProjectHeading
+	{\textbf{1st Place -- New Jersey Academy of Science} $|$ \emph{Health \& Medicine}}{May 2025}
+	
+	\resumeProjectHeading
+	{\textbf{ISEF Grand Prize -- Terra North Jersey STEM Fair} $|$ \emph{Bioinformatics}}{March 2025}
+	\resumeItemListStart
+	\resumeItem{Placed top 6 out of 200+ projects}
+	\resumeItem{1st Place Bioinformatics Award (2025)}
+	\resumeItem{Regeneron Biomedical Science Award}
+	\resumeItem{Karen Kranz Memorial Award}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Semifinalist \& Honorable Mention -- USA Biology Olympiad} $|$ \emph{Top 5-10\% nationally}}{2023, 2024}
+	
+	\resumeProjectHeading
+	{\textbf{Gold -- British Biology Olympiad} $|$ \emph{Top 5\% internationally}}{2024}
+	
+	\resumeProjectHeading
+	{\textbf{Finalist -- American Computer Science League} $|$ \emph{Top 5\%-10\% nationally}}{2023}
+	
+	\resumeProjectHeading
+	{\textbf{First Tech Challenge Robotics} $|$ \emph{Team \#8405 \& \#23650}}{2023}
+	\resumeItemListStart
+	\resumeItem{Inspire Award (2025)}
+	\resumeItem{Control Award (2024)}
+	\resumeItem{Innovate Award (2023)}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	%-----------PROJECTS-----------
+	\section{Projects}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{SignSensei} $|$ \emph{Python, Mediapipe, Tensorflow, OpenCV, Streamlit} $|$ \href{https://github.com/justanotherinternetguy/SignSensei}{\underline{github.com/SignSensei}}}{2023}
+	\resumeItemListStart
+	\resumeItem{Developed a web application to gamify learning American Sign Language (ASL)}
+	\resumeItem{Built and trained a custom Tensorflow ML model for hand pose detection and classification}
+	\resumeItem{Awarded the Wolfram Award at PennApps 2023 (Top 20 projects)}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Sen\_deX} $|$ \emph{Python, Electron, Pytorch, Transformers, Flask, Supabase} $|$ \href{https://github.com/justanotherinternetguy/sen_dex}{\underline{github.com/sen\_dex}}}{2025}
+	\resumeItemListStart
+	\resumeItem{Built a full-stack application to predict trends in research}
+	\resumeItem{Implemented innovative embedding analysis, inverse embedding, and clustering algorithms}
+	\resumeItem{Awarded the Best Educational Hack at PennApps 2025}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	\section{Work Experience}
+	\resumeSubHeadingListStart
+	\resumeSSubheading
+	{Sync Labs}{University of Pennsylvania}
+	{Software Engineering/AI Intern}{June. 2024 -- Sept. 2024}
+	\resumeItemListStart
+	\resumeItem{Led development of facial and action recognition models (FaceNetV2, MoViNet) to provide personalized health information (exercise, diet, nutritional intake) for residents in senior homes}
+	\resumeItem{Fine-tuned and deployed CV models and LLMs on Raspberry Pi IoT devices}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	\section{Leadership \& Volunteering}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+	{\textbf{Conlang Club} $|$ \emph{Founder \& President}}{2023 -- Present}
+	\resumeItemListStart
+	\resumeItem{Founded club to explore constructed languages (Quenya, Klingon, Dothraki, etc.) and applied linguistics}
+	\resumeItem{Grew membership from 10 to 40+ in two years}
+	\resumeItem{Co-founded \emph{Verborum}, the first high school--only linguistics magazine; recruited submissions from 4+ countries and personally edited 10+ articles out of 60+ collected}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{HackMHS VIII, IX, X, XI} $|$ \emph{Co-organizer}}{2023 -- Present}
+	\resumeItemListStart
+	\resumeItem{Organized NJ's largest high school hackathon (100+ participants annually)}
+	\resumeItem{Built \href{https://hackmhs.com/}{\underline{hackmhs.com}}, secured sponsors, acquired Bambu 3D printers, ran workshops and technical talks}
+	\resumeItem{Fostered an inclusive hackathon community, leading logistics and outreach}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Teaching Assistant} $|$ \emph{USA Biolympiad Prep}}{2024 -- 2025}
+	\resumeItemListStart
+	\resumeItem{Mentored high school biology students through weekly lectures, office hours, and custom practice exams}
+	\resumeItem{13/60 students taught advanced to USABO Semifinals}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Wolfram Student Ambassador}}{2024 -- 2025}
+	\resumeItemListStart
+	\resumeItem{Mentored OneHacks V hackathon (200+ participants)}
+	\resumeItem{Answered questions virtually, gave technical talks and workshops on data science and the Wolfram Language}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Scratch Instructor} $|$ \emph{Millburn Institute of Talent}}{2022 -- 2023}
+	\resumeItemListStart
+	\resumeItem{Designed and taught Scratch CS curricula to elementary/middle schoolers}
+	\resumeItem{Boosted program revenue by \$4k+}
+	\resumeItemListEnd
+	
+	\resumeProjectHeading
+	{\textbf{Robotics Summer Coach} $|$ \emph{West Caldwell Tech}}{2023}
+	\resumeItemListStart
+	\resumeItem{Taught robotics and CS to 100+ underserved middle schoolers in 3-week summer camp}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	%
+	%-----------PROGRAMMING SKILLS-----------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+				\textbf{Languages}{: Python, Java, C/C++, SQL (Postgres), JavaScript, Wolfram Mathematica} \\
+				\textbf{AI/ML}{: Deep Learning (CNNs, LSTMs, Transformers), Time-Series Analysis, Audio Processing, Computer Vision, NLP} \\
+				\textbf{Technologies}{: Pytorch, Tensorflow, Next.JS, Firebase, Supabase, Flutter, Linux} \\
+				\textbf{Skills}{: Data Science, Computational Modeling, Full-stack Web Development, Autonomous Robotics, System Administration} \\
+		}}
+	\end{itemize}
+	
+	
+	%-------------------------------------------
+\end{document}
